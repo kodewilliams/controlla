@@ -1,5 +1,6 @@
 html,
-body {
+body,
+div#root {
   min-height: 100vh;
   min-width: 100vw;
   max-width: 100vw;
@@ -12,4 +13,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,12 @@
+.samplers {
+  grid-area: samplers;
+  background: #0f0f0f;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  border-radius: 1.5rem;
+  border: 3px solid rgba(50, 50, 50, 0.2);
+}

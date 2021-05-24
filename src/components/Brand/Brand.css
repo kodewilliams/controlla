@@ -1,0 +1,23 @@
+.brand {
+  grid-area: brand;
+  display: flex;
+  padding: 3rem 0;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.brand * {
+  font-size: 2em;
+  font-family: "Monoton", cursive;
+  text-transform: uppercase;
+}
+
+#name {
+  color: red;
+  font-weight: normal;
+}
+
+#version {
+  color: lightgray;
+  font-family: "Monoton", cursive;
+}

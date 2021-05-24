@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Controlla from "./Controlla/Controlla";
+import Controlla from "./components/Controlla/Controlla";
 import "./index.css";
 
 ReactDOM.render(

@@ -1,0 +1,21 @@
+.sampler {
+  display: grid;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  grid-template-rows: 85% auto;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 0.2);
+}
+
+.pad {
+  color: #ccc;
+}
+
+.label {
+  color: lightgray;
+  font-size: 0.75em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  background: rgba(0, 0, 0, 0.25);
+}
