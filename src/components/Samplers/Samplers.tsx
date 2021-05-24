@@ -1,22 +1,19 @@
 import "./Samplers.css";
-import { FC, useEffect } from "react";
+import { FC, useContext } from "react";
+import { observer } from "mobx-react-lite";
 import Sampler from "../Sampler/Sampler";
-import useKeyPressed from "../../hooks/useKeyPress";
+// import useKeyPressed from "../../hooks/useKeyPress";
+import { ConfigContext } from "../../states/config";
 
-const Samplers: FC = () => {
-  const spacePressed = useKeyPressed("u");
+const Samplers: FC = observer(() => {
+  const { mappings } = useContext(ConfigContext);
 
-  const pads = [];
+  const renderPads = () =>
+    Object.entries(mappings).map(([key, mapping]) => (
+      <Sampler key={`sampler-${key}`} id={key} mapping={mapping} />
+    ));
 
-  useEffect(() => {
-    console.log(spacePressed);
-  }, [spacePressed]);
-
-  for (let idx = 0; idx < 9; ++idx) {
-    pads.push(<Sampler key={`sampler-${idx + 1}`} index={idx + 1} />);
-  }
-
-  return <div className='samplers'>{pads}</div>;
-};
+  return <div className='samplers'>{renderPads()}</div>;
+});
 
 export default Samplers;

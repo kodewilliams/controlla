@@ -1,14 +1,16 @@
 .sampler {
   display: grid;
   overflow: hidden;
+  position: relative;
   border-radius: 1.5rem;
+  background: #0b0b0b;
   grid-template-rows: 85% auto;
   border: 1px solid rgba(255, 0, 0, 0.2);
   box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 0.2);
 }
 
 .pad {
-  color: #ccc;
+  color: lightgray;
 }
 
 .label {
@@ -17,5 +19,27 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: -0.025em;
-  background: rgba(0, 0, 0, 0.25);
+}
+
+.sampler:active,
+.sampler:hover {
+  background: rgba(255, 0, 0, 0.5);
+  box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 1);
+}
+
+.sampler:hover .samplerConfig {
+  right: 0;
+}
+
+.samplerConfig {
+  position: absolute;
+  font-size: 1.25em;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  top: 0;
+  right: -5rem;
+  color: lightgray;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
 }
