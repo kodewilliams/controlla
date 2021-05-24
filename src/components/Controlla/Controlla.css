@@ -1,9 +1,12 @@
 .controlla {
-  background: #0a0a0a;
-  height: 100vh;
-  width: 100vw;
+  height: 90vh;
+  width: 100%;
   padding: 3rem;
   display: grid;
+  min-width: 720px;
+  max-width: 1140px;
+  background: #0a0a0a;
+  column-gap: 2rem;
   grid-template-columns: 0.75fr 2fr;
   grid-template-rows: max-content auto;
   grid-template-areas:
