@@ -26,10 +26,6 @@
   box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 1);
 }
 
-.sampler:hover .samplerConfig {
-  right: 0;
-}
-
 .samplerConfig {
   position: absolute;
   font-size: 1.25em;
@@ -37,7 +33,7 @@
   outline: none;
   border: none;
   top: 0;
-  right: -5rem;
+  right: 0rem;
   color: lightgray;
   background: transparent;
   transition: all 0.2s ease-in-out;
