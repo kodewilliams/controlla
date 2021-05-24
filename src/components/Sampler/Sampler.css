@@ -23,7 +23,6 @@
 
 .sampler:active,
 .sampler:hover {
-  background: rgba(255, 0, 0, 0.5);
   box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 1);
 }
 
