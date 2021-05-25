@@ -2,7 +2,7 @@ import "./Controlla.css";
 import { FC } from "react";
 
 import Brand from "../Brand/Brand";
-import Config from "../Config/Config";
+import Usage from "../Usage/Usage";
 import Samplers from "../Samplers/Samplers";
 import { ConfigProvider, ConfigState } from "../../states/config";
 
@@ -13,7 +13,7 @@ const Controlla: FC = () => {
     <div className='controlla'>
       <ConfigProvider value={store}>
         <Brand />
-        <Config />
+        <Usage />
         <Samplers />
       </ConfigProvider>
     </div>

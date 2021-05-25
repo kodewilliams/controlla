@@ -2,9 +2,9 @@
   display: grid;
   overflow: hidden;
   position: relative;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   background: #0b0b0b;
-  grid-template-rows: 85% auto;
+  grid-template-rows: 80% auto;
   border: 1px solid rgba(255, 0, 0, 0.2);
   box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 0.2);
 }
@@ -15,6 +15,7 @@
 
 .label {
   color: lightgray;
+  padding: 0.5rem;
   font-size: 0.65em;
   text-align: center;
   text-transform: uppercase;
@@ -24,6 +25,10 @@
 .sampler:active,
 .sampler:hover {
   box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 1);
+}
+
+.activePad {
+  background: rgba(255, 0, 0, 0.75);
 }
 
 .samplerConfig {

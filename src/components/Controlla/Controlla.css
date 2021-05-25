@@ -11,5 +11,5 @@
   grid-template-rows: max-content auto;
   grid-template-areas:
     "brand brand"
-    "config samplers";
+    "usage samplers";
 }

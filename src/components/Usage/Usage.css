@@ -1,5 +1,5 @@
-.config {
-  grid-area: config;
+.usage {
+  grid-area: usage;
   border-radius: 1.5rem;
   background: #0f0f0f;
   border: 3px solid rgba(50, 50, 50, 0.2);

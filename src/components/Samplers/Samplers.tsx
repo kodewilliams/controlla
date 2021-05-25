@@ -1,19 +1,44 @@
 import "./Samplers.css";
-import { FC, useContext } from "react";
+import { FC, useContext, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import Sampler from "../Sampler/Sampler";
-// import useKeyPressed from "../../hooks/useKeyPress";
 import { ConfigContext } from "../../states/config";
 
 const Samplers: FC = observer(() => {
-  const { mappings } = useContext(ConfigContext);
+  const store = useContext(ConfigContext);
+  const { updatePressed, clearPressed } = store;
 
-  const renderPads = () =>
-    Object.entries(mappings).map(([key, mapping]) => (
-      <Sampler key={`sampler-${key}`} id={key} mapping={mapping} />
-    ));
+  useEffect(() => {
+    const onKeyDown = (e: any) => {
+      if (e.repeat) return;
+      updatePressed(e.key);
+      return e.key;
+    };
 
-  return <div className='samplers'>{renderPads()}</div>;
+    const onKeyUp = (e: any) => {
+      clearPressed();
+      return e.key;
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("keyup", onKeyUp);
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("keyup", onKeyUp);
+    };
+  }, [updatePressed, clearPressed]);
+
+  const pads = Object.entries(store.mappings).map(([key, mapping]) => (
+    <Sampler
+      id={key}
+      key={`sampler-${key}`}
+      mapping={mapping}
+      active={store.pressed === mapping}
+    />
+  ));
+
+  return <div className='samplers'>{pads}</div>;
 });
 
 export default Samplers;

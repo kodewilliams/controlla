@@ -1,14 +1,10 @@
 import "./Sampler.css";
-import { FC, useContext, useEffect } from "react";
-import { ConfigContext } from "../../states/config";
+import { FC, useContext } from "react";
 import { FiSettings } from "react-icons/fi";
+import { ConfigContext } from "../../states/config";
+import { observer } from "mobx-react-lite";
 
-interface Props {
-  id: string;
-  mapping: string;
-}
-
-const SamplerConfig: FC<any> = ({ id, children }) => {
+const SamplerConfig: FC<any> = observer(({ id, children }) => {
   const store = useContext(ConfigContext);
 
   const handleUpdate = () => {
@@ -21,22 +17,28 @@ const SamplerConfig: FC<any> = ({ id, children }) => {
     }
   };
 
-  useEffect(() => {}, []);
-
   return (
     <button className='samplerConfig' onClick={() => handleUpdate()}>
       {children}
     </button>
   );
-};
+});
 
-const Sampler: FC<Props> = ({ id, mapping }) => {
+interface SamplerProps {
+  id: string;
+  active: boolean;
+  mapping: string;
+}
+
+const Sampler: FC<SamplerProps> = ({ id, active, mapping }) => {
   return (
     <div className='sampler'>
-      <SamplerConfig id={id}>
-        <FiSettings />
-      </SamplerConfig>
-      <div className='pad centered' />
+      <div style={{ display: "none" }}>
+        <SamplerConfig id={id}>
+          <FiSettings />
+        </SamplerConfig>
+      </div>
+      <div className={`pad centered ${active ? "activePad" : ""}`} />
       <span className='label centered'>{`Pad ${id} - ${mapping}`}</span>
     </div>
   );
