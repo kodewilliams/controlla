@@ -4,7 +4,7 @@
   position: relative;
   border-radius: 1rem;
   background: #0b0b0b;
-  grid-template-rows: 80% auto;
+  grid-template-rows: 50% auto;
   border: 1px solid rgba(255, 0, 0, 0.2);
   box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 0.2);
 }
@@ -23,23 +23,7 @@
 }
 
 .sampler:active,
-.sampler:hover {
-  box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 1);
-}
-
+.sampler:hover,
 .activePad {
-  background: rgba(255, 0, 0, 0.75);
-}
-
-.samplerConfig {
-  position: absolute;
-  font-size: 1.25em;
-  padding: 1rem;
-  outline: none;
-  border: none;
-  top: 0;
-  right: 0rem;
-  color: lightgray;
-  background: transparent;
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0rem 0rem 1.25rem 0.2rem rgba(255, 0, 0, 1);
 }

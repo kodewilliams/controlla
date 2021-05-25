@@ -12,8 +12,8 @@ const Controlla: FC = () => {
   return (
     <div className='controlla'>
       <ConfigProvider value={store}>
-        <Brand />
         <Usage />
+        <Brand />
         <Samplers />
       </ConfigProvider>
     </div>

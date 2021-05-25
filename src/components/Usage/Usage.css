@@ -1,6 +1,19 @@
-.usage {
-  grid-area: usage;
-  border-radius: 1.5rem;
-  background: #0f0f0f;
-  border: 3px solid rgba(50, 50, 50, 0.2);
+button.usage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  margin: 3rem;
+  padding: 1rem;
+  font-size: 2em;
+  border-radius: 100%;
+  color: lightgray;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0rem 0rem 1rem rgba(255, 255, 255, 0.5);
+}
+
+button.usage:hover {
+  box-shadow: 0rem 0rem 1rem rgba(255, 255, 255, 1);
 }

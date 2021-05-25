@@ -1,7 +1,7 @@
 .samplers {
   grid-area: samplers;
   background: #0f0f0f;
-  padding: 3rem;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
