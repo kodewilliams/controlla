@@ -1,16 +1,11 @@
 .sampler {
-  display: grid;
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
   background: #0b0b0b;
   grid-template-rows: 50% auto;
   border: 1px solid rgba(255, 0, 0, 0.2);
-  box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 0.2);
-}
-
-.pad {
-  color: lightgray;
+  box-shadow: 0rem 0rem 0.75rem rgba(255, 0, 0, 0.2);
 }
 
 .label {
@@ -23,7 +18,7 @@
 }
 
 .sampler:active,
-.sampler:hover,
+.sample:hover,
 .activePad {
-  box-shadow: 0rem 0rem 1.25rem 0.2rem rgba(255, 0, 0, 1);
+  box-shadow: 0rem 0rem 0.75rem 0.1rem rgba(255, 0, 0, 1);
 }

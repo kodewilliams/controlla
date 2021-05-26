@@ -12,12 +12,10 @@ const Samplers: FC = observer(() => {
     const onKeyDown = (e: any) => {
       if (e.repeat) return;
       updatePressed(e.key);
-      return e.key;
     };
 
     const onKeyUp = (e: any) => {
       clearPressed();
-      return e.key;
     };
 
     window.addEventListener("keydown", onKeyDown);
@@ -29,12 +27,12 @@ const Samplers: FC = observer(() => {
     };
   }, [updatePressed, clearPressed]);
 
-  const pads = Object.entries(store.mappings).map(([key, mapping]) => (
+  const pads = Object.entries(store.getMappings()).map(([key, mapping]) => (
     <Sampler
       id={key}
       key={`sampler-${key}`}
       mapping={mapping}
-      active={store.pressed === mapping}
+      active={mapping === store.pressed}
     />
   ));
 
